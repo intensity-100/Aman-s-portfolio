@@ -11,7 +11,7 @@ export default function OrbBackground() {
       inset:0,
       zIndex:0,
       overflow:'hidden',
-      pointerEvents:'none' // important
+      pointerEvents:'auto' // important
     }}>
       <Orb
         hoverIntensity={0.5}
