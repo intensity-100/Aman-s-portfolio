@@ -1,29 +1,31 @@
 import React from 'react';
 import { Download, Mail, Github, Linkedin } from 'lucide-react';
-import Orb from './Orb'; // ✅ Orb component
+import Orb from './Orb';
 
 const Hero = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+    >
       {/* ✅ Orb Background Layer */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 pointer-events-none">
         <Orb
           hoverIntensity={0.5}
-          rotateOnHover={true}
+          rotateOnHover
           hue={0}
           forceHoverState={false}
         />
       </div>
 
-      {/* ✅ Hero Content with pointer-events fix */}
+      {/* ✅ Main content with pointer events enabled only where needed */}
       <div
         className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto"
-        style={{ pointerEvents: 'none' }} // ⬅️ allow hover through
+        style={{ pointerEvents: 'none' }}
       >
         <div
           className="bg-white/10 dark:bg-gray-900/20 backdrop-blur-sm rounded-3xl p-8 sm:p-12 border border-white/20 dark:border-gray-700/30"
-          style={{ pointerEvents: 'auto' }} // ⬅️ keep buttons clickable
+          style={{ pointerEvents: 'auto' }}
         >
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-4">
             <span className="block">Aman</span>
@@ -37,7 +39,7 @@ const Hero = () => {
           </h2>
 
           <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto leading-relaxed">
-            Passionate about threat detection, SOC operations, and ethical hacking. 
+            Passionate about threat detection, SOC operations, and ethical hacking.
             Protecting digital assets through proactive security measures and innovative solutions.
           </p>
 
@@ -81,7 +83,8 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      {/* Bounce Scroll Hint */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
         <div className="w-6 h-10 border-2 border-gray-400 dark:border-gray-600 rounded-full flex justify-center">
           <div className="w-1 h-3 bg-gray-400 dark:bg-gray-600 rounded-full mt-2 animate-pulse"></div>
         </div>
