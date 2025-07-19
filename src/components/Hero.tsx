@@ -18,10 +18,10 @@ const Hero = () => {
 
       {/* Hero Content */}
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
-        <div
-          className="bg-white/10 dark:bg-gray-900/20 backdrop-blur-sm rounded-3xl p-8 sm:p-12 border border-white/20 dark:border-gray-700/30"
-          style={{ pointerEvents: 'none' }} // allow background interaction
-        >
+      <div
+  className="rounded-3xl p-8 sm:p-12"
+>
+
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-4">
             <span className="block">Aman</span>
             <span className="block bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
