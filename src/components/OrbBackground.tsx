@@ -10,16 +10,24 @@ export default function OrbBackground() {
         height: '100%',
         position: 'absolute',
         inset: 0,
-        pointerEvents: 'none', // 👈 THIS LINE FIXES IT
-        zIndex: -1              // Optional: keeps orb behind content
+        zIndex: 0,                  // Keep behind all content
+        overflow: 'hidden',
       }}
     >
-      <Orb
-        hoverIntensity={0.5}
-        rotateOnHover={true}
-        hue={0}
-        forceHoverState={false}
-      />
+      <div
+        style={{
+          width: '100%',
+          height: '100%',
+          pointerEvents: 'auto',     // Enable hover
+        }}
+      >
+        <Orb
+          hoverIntensity={0.5}
+          rotateOnHover={true}
+          hue={0}
+          forceHoverState={false}
+        />
+      </div>
     </div>
   );
 }
