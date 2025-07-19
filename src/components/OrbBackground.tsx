@@ -12,13 +12,14 @@ export default function OrbBackground() {
         inset: 0,
         zIndex: 0,                  // Keep behind all content
         overflow: 'hidden',
+        pointerEvents: 'none'       // ✅ Let events pass through this layer
       }}
     >
       <div
         style={{
           width: '100%',
           height: '100%',
-          pointerEvents: 'auto',     // Enable hover
+          pointerEvents: 'auto',     // ✅ But Orb can still receive mouse move
         }}
       >
         <Orb
